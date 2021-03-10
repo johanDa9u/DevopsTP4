@@ -83,6 +83,12 @@ public class MyUnsortedListTest {
 		assertEquals(2, list.size());
 	}
 	
+	@Test(expected = EmptyListException.class)
+	public void testPopEmptyList()
+	{
+		getList().popLast();
+	}
+	
 	@Test
 	public void testRemove()
 	{
@@ -115,5 +121,5 @@ public class MyUnsortedListTest {
 		
 		assertTrue(!list.equals(listWrong));
 		assertTrue(!list.equals(listWrong2));
-	}
+	}	
 }
